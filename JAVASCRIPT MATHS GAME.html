@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MATHS GAME</title>
+</head>
+<body>
+    <script>
+        alert("Welcome to the Guessing Game!");
+        alert("You have three attempts to guess  number between 1-50");
+        alert("Good Luck!");
+        var RandomNumber = Math.floor(Math.random() * 50) +1; // Random number between 1 and 50
+        var attempts = 3; //Number of attempts allowed
+        for (var i = 0; i < attempts; i++){
+            var RandomNumbers = prompt("Enter your guess");
+        if (RandomNumbers < 1 || RandomNumbers > 50)
+        {alert("Out of bounds! Please enter a number between 1 and 50.");continue;}
+        if (RandomNumbers === RandomNumber)
+        {alert("Congratulations!You Guessed Right! .....HURRAY!");break;}
+        else if (RandomNumbers !== RandomNumber)
+        {alert("Wrong guess! you have " + (attempts-i-1) + " attempts left. Try again.");}
+        }
+        if (i === attempts)
+        {alert("Sorry you have used all your attempts. The answer is " + RandomNumber + ". Game Over!");}
+    </script>
+</body>
+</html>
